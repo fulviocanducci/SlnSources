@@ -1,0 +1,14 @@
+﻿<div class="text-center">
+   <div x-data="digimon" class="n-clock">
+      <template x-show="items === null">Carregando ...</template>
+      <template x-for="item in items">
+         <div>
+            <div x-text="item.name"></div>
+            <div><img x-bind:src="item.image"/></div>
+         </div>
+      </template>
+   </div>
+</div>
+@section Scripts {
+   <script src="~/js/digimon.js" asp-append-version="true" defer></script>
+}
